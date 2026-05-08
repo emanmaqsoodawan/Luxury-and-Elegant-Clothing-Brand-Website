@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E L E G A N C E | Luxury Clothing</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="logo">E L E G A N C E</div>
+      <div class="search-bar">
+        <input type="text" id="search-input" placeholder="Search products..." />
+      </div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#collections">Collections</a></li>
+        <li><a href="#about">Our Story</a></li>
+      </ul>
+      <div class="nav-icons">
+        <span id="login-icon" class="login-icon-nav">Login</span>
+        <span id="wishlist-icon" class="pointer"
+          >❤️
+          <span id="wish-count" class="cart-count wish-count-badge"
+            >0</span
+          ></span
+        >
+        <span id="cart-icon" class="pointer-rel">
+          &#128717;
+          <span id="cart-count" class="cart-count">0</span>
+        </span>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="home" class="hero">
+      <img
+        src="assets/hero_hijab_model_1778234287733.png"
+        alt="Elegant Woman in Hijab"
+        class="hero-bg"
+      />
+      <div class="hero-content">
+        <h1>Refined Modesty</h1>
+        <p>
+          Discover our latest collection of luxury clothing, blending timeless
+          elegance with modern modesty.
+        </p>
+        <a href="#collections" class="btn">Explore Collection</a>
+      </div>
+    </header>
+
+    <!-- Collections Section -->
+    <section id="collections" class="collections">
+      <div class="section-title">
+        <h2>Our Signature Collection</h2>
+        <p>
+          Explore our beautifully crafted clothing, designed for modern elegance
+          and comfort.
+        </p>
+      </div>
+
+      <div class="category-filters">
+        <button class="filter-btn active" data-category="All">All</button>
+        <button class="filter-btn" data-category="Women">
+          Women's Collection
+        </button>
+        <button class="filter-btn" data-category="Men">Men's Collection</button>
+      </div>
+
+      <div class="products-grid" id="products-grid">
+        <!-- Products will be dynamically loaded here by JavaScript -->
+      </div>
+    </section>
+
+    <!-- Our Story Section -->
+    <section
+      id="about"
+      style="
+        padding: 5rem 5%;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 4rem;
+        background: white;
+        color: black;
+      "
+    >
+      <img
+        src="assets/woman_dress_2_1778235243107.png"
+        alt="Our Story"
+        style="
+          flex: 1;
+          min-width: 300px;
+          height: 600px;
+          object-fit: cover;
+          border-radius: 5px;
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        "
+      />
+      <div style="flex: 1; min-width: 300px">
+        <h2
+          style="
+            margin-bottom: 1.5rem;
+            color: var(--primary-color);
+            font-size: 2.5rem;
+          "
+        >
+          Our Story
+        </h2>
+        <p style="margin-bottom: 1.5rem; line-height: 1.8; font-size: 1.1rem">
+          E L E G A N C E was created to bring together beautiful modest
+          clothing and modern style. We believe you shouldn't have to choose
+          between looking fashionable and dressing modestly. Every outfit we
+          make is designed to help you feel confident and comfortable.
+        </p>
+        <p style="line-height: 1.8; font-size: 1.1rem">
+          Whether you are going to work or attending a special event, our
+          clothes are made with the best fabrics so you always look and feel
+          your best. Welcome to a new standard of premium fashion.
+        </p>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-content flex-wrap">
+        <div class="footer-brand">
+          <h3>E L E G A N C E</h3>
+          <p>Luxury redefined.</p>
+        </div>
+        <div class="newsletter">
+          <h4>Subscribe to our Newsletter</h4>
+          <p>Get 10% off your first order.</p>
+          <form id="newsletter-form" class="newsletter-form">
+            <input
+              type="email"
+              id="nl-email"
+              class="form-input flex-1"
+              placeholder="Your Email"
+              required
+            />
+            <button type="submit" class="btn form-btn flex-1">Subscribe</button>
+          </form>
+          <div
+            id="newsletter-msg"
+            style="margin-top: 0.8rem; font-size: 0.95rem; color: #2a7a2a"
+          ></div>
+        </div>
+        <div class="footer-links">
+          <a href="contact.html">Contact</a>
+          <a href="shipping.html">Shipping & Returns</a>
+          <a href="privacy.html">Privacy Policy</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 E L E G A N C E. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- Cart Sidebar -->
+    <div id="cart-sidebar" class="cart-sidebar">
+      <div class="cart-header">
+        <h2>Your Cart</h2>
+        <button id="close-cart" class="close-btn">&times;</button>
+      </div>
+      <div class="cart-items" id="cart-items"></div>
+      <div class="cart-footer">
+        <div class="cart-total">
+          Total: $<span id="cart-total-price">0.00</span>
+        </div>
+        <button id="checkout-btn" class="btn checkout-btn">Checkout</button>
+      </div>
+    </div>
+    <div id="cart-overlay" class="cart-overlay"></div>
+
+    <!-- Checkout Modal -->
+    <div id="checkout-modal" class="modal">
+      <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <h2 class="mb-20">Complete Your Order</h2>
+        <form id="checkout-form">
+          <input
+            type="text"
+            id="cust-name"
+            class="form-input"
+            placeholder="Full Name"
+            required
+          />
+          <input
+            type="email"
+            id="cust-email"
+            class="form-input"
+            placeholder="Email Address"
+            required
+          />
+          <button type="submit" class="btn form-btn">Confirm Order</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Wishlist Modal -->
+    <div id="wishlist-modal" class="modal">
+      <div class="modal-content" style="max-width: 600px">
+        <span class="close-wishlist-modal close-icon-right">&times;</span>
+        <h2 class="mb-20">Your Wishlist ❤️</h2>
+        <div
+          id="wishlist-items-container"
+          style="
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            max-height: 400px;
+            overflow-y: auto;
+          "
+        >
+          <!-- Wishlist items injected here -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Login Modal -->
+    <div id="login-modal" class="modal">
+      <div class="modal-content">
+        <span class="close-login-modal close-icon-right">&times;</span>
+        <h2 class="mb-20">Sign In</h2>
+        <form id="login-form">
+          <input
+            type="email"
+            id="login-email"
+            class="form-input"
+            placeholder="Email Address"
+            required
+          />
+          <input
+            type="password"
+            id="login-password"
+            class="form-input"
+            placeholder="Password"
+            required
+          />
+          <button type="submit" class="btn form-btn">Sign In</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Quick View Modal -->
+    <div id="quick-view-modal" class="modal">
+      <div class="modal-content qv-modal-content">
+        <span class="close-qv-modal qv-close">&times;</span>
+        <img id="qv-img" src="" alt="" class="qv-img" />
+        <div class="qv-info">
+          <h2 id="qv-title" class="mb-10"></h2>
+          <p id="qv-price" class="qv-price-text"></p>
+          <p id="qv-desc" class="mb-20"></p>
+          <h4 class="mb-10">Select Size:</h4>
+          <div class="flex-gap-10">
+            <button class="size-btn">S</button>
+            <button class="size-btn">M</button>
+            <button class="size-btn">L</button>
+            <button class="size-btn">XL</button>
+          </div>
+          <button id="qv-add-cart" class="add-to-cart">Add to Cart</button>
+          <div class="star-rating">
+            ★★★★★ <span class="review-count">(12 Reviews)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
