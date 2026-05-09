@@ -1,7 +1,4 @@
-Here's a comprehensive project description for your GitHub README:
-
-```markdown
-# E L E G A N C E - Luxury Clothing Store
+**# E L E G A N C E - Luxury Clothing Store**
 
 ## 📋 Project Overview
 
