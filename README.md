@@ -6,8 +6,6 @@
 
 **Live Features**: Product catalog (20+ curated items), search functionality, shopping cart, wishlist system, user authentication, order management, and customer support pages.
 
----
-
 ## ✨ Key Features
 
 ### Customer Features
