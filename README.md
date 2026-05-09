@@ -274,4 +274,3 @@ This README covers:
 ✅ Security features  
 ✅ Product catalog  
 
-You can now add this to your GitHub repository by creating a `README.md` file in the root folder!
